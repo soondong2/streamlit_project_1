@@ -13,11 +13,10 @@ title('지출 목적별 소비자 물가지수 EDA')
 line_break()
 line_break()
 
-@st.cache
-# data load
 DATA_URL1 = 'data/KOSIS_소비자물가지수.csv'
 DATA_URL2 = 'data/df.csv'
 
+@st.cache
 # data load function
 @st.cache
 def load_data(DATA_URL, nrows):
