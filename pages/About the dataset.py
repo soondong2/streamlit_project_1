@@ -19,9 +19,12 @@ def load_data(nrows):
     return data
 
 # data load & checkbox
-check = st.checkbox('Original Dataset')
+callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
+data_load_state = st.text('Loading data...')
+data = load_data(1000)
+data_load_state.text("")
 
-if check:
-  data_load_state = st.text('Loading data...')
-  data = load_data(1000)
-  data_load_state.text("")
+section("Insurance Data", 250)
+with st.expander("Insurance Premium Raw Data 보기 🔍"):
+    st.table(data)
+line_break()
