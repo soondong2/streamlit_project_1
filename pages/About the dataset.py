@@ -10,7 +10,7 @@ st.set_page_config(
 title('About the dataset')
 
 # 데이터 프레임 가져오기
-DATA_URL = 'data/KOSIS_소비자물가지수'
+DATA_URL = 'data/KOSIS_소비자물가지수.csv'
 
 # data load function
 @st.cache
