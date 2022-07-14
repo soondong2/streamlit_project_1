@@ -32,5 +32,11 @@ line_break()
 section('Data')
 link = 'https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1J20135&conn_path=I2/'
 st.markdown(link, unsafe_allow_html=True)
-st.caption('네이버 영화 사이트로 이동하기')
+st.caption('데이터 출처 사이트로 이동하기')
+line_break()
+
+section('Notion')
+link = 'https://www.notion.so/soondong/4ae0fb933caa480e9b389a3e46d98a68'
+st.markdown(link, unsafe_allow_html=True)
+st.caption('노션 페이지로 이동하기')
 line_break()
