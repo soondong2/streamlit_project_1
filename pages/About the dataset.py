@@ -20,7 +20,7 @@ def load_data(DATA_URL, nrows):
 
 # data load & checkbox1
 section("Original Dataset", 250)
-check_data1 = st.checkbox('KOSIS Dataset')
+check_data1 = st.checkbox('Show Dataset')
 
 if check_data1:
     callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
@@ -33,7 +33,7 @@ line_break()
 
 # data load & checkbox2
 section("Clearning Dataset", 250)
-check_data2 = st.checkbox('Clearning Dataset')
+check_data2 = st.checkbox('Show Dataset')
 
 DATA_URL2 = 'data/df.csv'
 
