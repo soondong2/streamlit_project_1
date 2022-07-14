@@ -92,5 +92,5 @@ option2 = st.selectbox(
 
 option3 = st.multiselect(
      'What are your favorite colors',
-     ['a', 'b', 'c', 'd'],
+     ['Green', 'Yellow', 'Red', 'Blue'],
      ['Yellow', 'Red'])
