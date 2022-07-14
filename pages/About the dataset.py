@@ -10,23 +10,38 @@ st.set_page_config(
 title('About the dataset')
 
 # 데이터 프레임 가져오기
-DATA_URL = 'data/KOSIS_소비자물가지수.csv'
+DATA_URL1 = 'data/KOSIS_소비자물가지수.csv'
 
 # data load function
 @st.cache
-def load_data(nrows):
+def load_data(DATA_URL, nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
     return data
 
-# data load & checkbox
+# data load & checkbox1
 section("Original Dataset", 250)
 check_data = st.checkbox('KOSIS Dataset')
 
 if check_data:
     callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
     data_load_state = st.text('Loading data...')
-    data = load_data(1000)
+    data = load_data(DATA_URL1, 1000)
     data_load_state.text("")
     st.dataframe(load_data(1000))
 
+line_break()
+
+# data load & checkbox2
+section("Original Dataset", 250)
+check_data = st.checkbox('KOSIS Dataset')
+
+DATA_URL2 = 'data/df.csv'
+
+if check_data:
+    callout(['분석에 사용하기 위해 전처리하여 가공한 데이터셋입니다.'])
+    data_load_state = st.text('Loading data...')
+    data = load_data(DATA_URL2, 1000)
+    data_load_state.text("")
+    callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
     
+line_break()
