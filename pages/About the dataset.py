@@ -20,9 +20,9 @@ def load_data(DATA_URL, nrows):
 
 # data load & checkbox1
 section("Original Dataset", 250)
-check_data = st.checkbox('KOSIS Dataset')
+check_data1 = st.checkbox('KOSIS Dataset')
 
-if check_data:
+if check_data1:
     callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
     data_load_state = st.text('Loading data...')
     data = load_data(DATA_URL1, 1000)
@@ -33,11 +33,11 @@ line_break()
 
 # data load & checkbox2
 section("Original Dataset", 250)
-check_data = st.checkbox('Clearning Dataset')
+check_data2 = st.checkbox('Clearning Dataset')
 
 DATA_URL2 = 'data/df.csv'
 
-if check_data:
+if check_data2:
     callout(['분석에 사용하기 위해 전처리하여 가공한 데이터셋입니다.'])
     data_load_state = st.text('Loading data...')
     data = load_data(DATA_URL2, 1000)
