@@ -104,5 +104,5 @@ option2 = st.selectbox(
      )
 
 fig = plt.figure(figsize=(10, 5))
-CPI_plot(data1, option1, '전국')
+CPI_plot(data1, '0', '전국')
 st.pyplot(fig)
