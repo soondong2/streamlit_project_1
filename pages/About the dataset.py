@@ -19,7 +19,7 @@ def load_data(nrows):
     return data
 
 # data load & checkbox
-section("KOSIS 소비자 물가지수 Dataset", 250)
+section("KOSIS Dataset", 250)
 check_data = st.checkbox('I agree')
 
 if check_data:
