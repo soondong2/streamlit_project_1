@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from html_module import section, callout, line_break, title
 
 st.set_page_config(
@@ -103,6 +104,6 @@ option2 = st.selectbox(
      '경상남도', '경상북도', '전라남도', '전라북도')
      )
 
-fig, ax = plt.subplots()
-ax.CPI_plot(data1, option1, option2)
+fig = plt.figure(figsize=(10, 4))
+CPI_plot(data1, option1, option2)
 st.pyplot(fig)
