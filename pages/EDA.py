@@ -9,6 +9,7 @@ st.set_page_config(
 )
 
 title('지출 목적별 소비자 물가지수 EDA')
+line_break()
 
 @st.cache
 # 전년비 dataframe function
