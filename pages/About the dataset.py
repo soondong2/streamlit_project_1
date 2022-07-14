@@ -33,7 +33,7 @@ line_break()
 
 # data load & checkbox2
 section("Original Dataset", 250)
-check_data = st.checkbox('KOSIS Dataset')
+check_data = st.checkbox('Clearning Dataset')
 
 DATA_URL2 = 'data/df.csv'
 
