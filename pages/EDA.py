@@ -64,7 +64,7 @@ def CPI_plot(data, code, region):
 st.subheader('품목별 소비자 물가지수 그래프')
 # 대분류 품목별 물가지수 select box
 option1 = st.sidebar.selectbox(
-     'Where is the category you want to check? 🔍',
+     'What category do you want to check? 🔍',
      ('0', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12')
      )
 
