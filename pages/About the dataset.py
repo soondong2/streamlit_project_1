@@ -27,7 +27,7 @@ if check_data1:
     data_load_state = st.text('Loading data...')
     data = load_data(DATA_URL1, 1000)
     data_load_state.text("")
-    st.dataframe(load_data(1000))
+    st.dataframe(data)
 
 line_break()
 
@@ -41,7 +41,7 @@ if check_data2:
     callout(['분석에 사용하기 위해 전처리하여 가공한 데이터셋입니다.'])
     data_load_state = st.text('Loading data...')
     data = load_data(DATA_URL2, 1000)
+    st.dataframe(data)
     data_load_state.text("")
-    callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
     
 line_break()
