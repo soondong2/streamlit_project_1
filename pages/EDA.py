@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from html_module import section, callout, line_break, title
 
 st.set_page_config(
