@@ -77,7 +77,7 @@ code_df = pd.DataFrame({
     '11' : '음식 및 숙박',
     '12' : '기타 상품 및 서비스'
 })
-st.dataframe(df)
+st.dataframe(code_df)
 
 st.subheader('품목별 소비자 물가지수 그래프')
 # 대분류 품목별 물가지수 select box
