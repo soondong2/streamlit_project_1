@@ -104,5 +104,6 @@ option2 = st.selectbox(
      )
 
 fig = plt.figure(figsize=(10, 4))
-CPI_plot(data1, option1, option2)
-st.pyplot()
+plot = CPI_plot(data1, option1, option2)
+ax.plot
+st.pyplot(fig)
