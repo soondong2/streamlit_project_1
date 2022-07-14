@@ -28,5 +28,3 @@ if check_data:
     data = load_data(1000)
     data_load_state.text("")
     st.table(load_data(1000)
-             
-line_break()
