@@ -32,7 +32,7 @@ if check_data1:
 line_break()
 
 # data load & checkbox2
-section("Original Dataset", 250)
+section("Clearning Dataset", 250)
 check_data2 = st.checkbox('Clearning Dataset')
 
 DATA_URL2 = 'data/df.csv'
