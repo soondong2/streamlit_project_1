@@ -92,5 +92,6 @@ option2 = st.selectbox(
      )
 
 fig, ax = plt.subplots()
+ax.CPI_plot(data, option1, option2)
 
-st.pyplot(CPI_plot(data, option1, option2))
+st.pyplot(fig)
