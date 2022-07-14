@@ -19,12 +19,12 @@ def load_data(nrows):
     return data
 
 # data load & checkbox
+section("KOSIS 소비자 물가지수 Dataset", 250)
 check_data = st.checkbox('I agree')
 
-section("Insurance Data", 250)
 if check_data:
     callout(['KOSIS 지출 목적별 소비자 물가지수 원본 데이터셋입니다.'])
     data_load_state = st.text('Loading data...')
     data = load_data(1000)
     data_load_state.text("")
-    st.table(load_data(1000))
+    st.dataframe(load_data(1000))
