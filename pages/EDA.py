@@ -63,7 +63,7 @@ def CPI_plot(data, code, region):
 
 # 품목 
 code_df = pd.DataFrame(
-    [0, 01, 02, 03, 04, 05, 06, 07]
+    [0, 01, 02, 03, 04, 05, 06, 07],
     columns = ['품목 코드', '대분류 품목']
 )
 st.dataframe(code_df)
