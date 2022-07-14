@@ -61,21 +61,25 @@ def CPI_plot(data, code, region):
     plt.legend(loc="best", frameon=True, fontsize=13)
     plt.show()
 
+
 # 품목 
+st.subheader('대분류 품목 코드')
+callout(['그래프를 그리기 위해 품목에 따른 품목 코드를 확인하세요.'])
 st.write(pd.DataFrame({
     'code' : ['0', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
     'category' : ['총지수', '식료품 및 비주류음료', '주류 및 담배', '의류 및 신발', '주택, 수도, 전기 및 연료', '가정용품 및 가사 서비스', '보건',
                 '교통', '통신', '오락 및 문화', '교육', '음식 및 숙박', '기타 상품 및 서비스']
 }))
+line_break()
 
 st.subheader('품목별 소비자 물가지수 그래프')
 # 대분류 품목별 물가지수 select box
-option1 = st.sidebar.selectbox(
+option1 = st.selectbox(
      'What category do you want to check? 🔍',
      ('0', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12')
      )
 
-option2 = st.sidebar.selectbox(
+option2 = st.selectbox(
      'Where is the area you want to check? 🔍',
      ('전국', '서울특별시', '울산광역시', '인천광역시', '광주광역시', '대구광역시', '대전광역시', '부산광역시', '세종특별자치시', '제주특별자치도', '강원도', '경기도',
      '경상남도', '경상북도', '전라남도', '전라북도')
