@@ -61,6 +61,24 @@ def CPI_plot(data, code, region):
     plt.legend(loc="best", frameon=True, fontsize=13)
     plt.show()
 
+# 품목 
+code_df = pd.DataFrame({
+    0 : '총지수',
+    01 : '식료품 및 비주류음료',
+    02 : '주류 및 담배',
+    03 : '의류 및 신발',
+    04 : '주택, 수도, 전기 및 연료',
+    05 : '가정용품 및 가사 서비스',
+    06 : '보건',
+    07 : '교통',
+    08 : '통신',
+    09 : '오락 및 문화',
+    10 : '교육',
+    11 : '음식 및 숙박',
+    12 : '기타 상품 및 서비스'
+})
+st.dataframe(df)
+
 st.subheader('품목별 소비자 물가지수 그래프')
 # 대분류 품목별 물가지수 select box
 option1 = st.sidebar.selectbox(
