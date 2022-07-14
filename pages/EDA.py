@@ -10,6 +10,7 @@ st.set_page_config(
 
 title('지출 목적별 소비자 물가지수 EDA')
 line_break()
+line_break()
 
 @st.cache
 # 전년비 dataframe function
@@ -73,6 +74,7 @@ if check1:
         'category' : ['총지수', '식료품 및 비주류음료', '주류 및 담배', '의류 및 신발', '주택, 수도, 전기 및 연료', '가정용품 및 가사 서비스',
                       '보건', '교통', '통신', '오락 및 문화', '교육', '음식 및 숙박', '기타 상품 및 서비스']
     }))
+line_break()
 line_break()
 
 st.subheader('품목별 소비자 물가지수 그래프')
