@@ -10,7 +10,7 @@ st.set_page_config(
 
 title('지출 목적별 소비자 물가지수 EDA')
 
-@st.chace
+@st.cache
 # 전년비 dataframe function
 def CPI_df(data, code, region):
     region_total = df_sample1[(df_sample1["품목코드"] == code) & (df_sample1["도시"] == region)]
@@ -60,9 +60,14 @@ def CPI_plot(data, code, region):
     plt.legend(loc="best", frameon=True, fontsize=13)
     plt.show()
 
-# 대분류 품목별 물가지수 plot
+# 대분류 품목별 물가지수 select box
 option = st.selectbox(
      'What are your wnat category?',
      ('0', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12')
      )
 
+option = st.selectbox(
+     'What are your wnat region?',
+     ('전국', '서울특별시', '울산광역시', '인천광역시', '광주광역시', '대구광역시', '대전광역시', '부산광역시', '세종특별자치시', '제주특별자치도', '강원도', '경기도',
+     '경상남도', '경상북도', '전라남도', '전라북도'
+     )
