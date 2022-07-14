@@ -103,6 +103,6 @@ option2 = st.selectbox(
      '경상남도', '경상북도', '전라남도', '전라북도')
      )
 
-fig = plt.figure(figsize=(10, 4))
-CPI_plot(data1, option1, option2)
+fig, ax = plt.subplots()
+ax.CPI_plot(data1, option1, option2)
 st.pyplot(fig)
