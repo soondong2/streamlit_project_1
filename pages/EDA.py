@@ -60,6 +60,7 @@ def CPI_plot(data, code, region):
     plt.legend(loc="best", frameon=True, fontsize=13)
     plt.show()
 
+st.subheader('품목별 소비자 물가지수 그래프')
 # 대분류 품목별 물가지수 select box
 option1 = st.selectbox(
      'What are your want category?',
