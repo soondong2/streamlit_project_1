@@ -7,7 +7,7 @@ st.set_page_config(
     page_title="CPI Dataset",
     page_icon="📈",
 )
-title('Data')
+title('About the dataset')
 
 # 데이터 프레임 가져오기
 DATA_URL = 'data/KOSIS_소비자물가지수'
