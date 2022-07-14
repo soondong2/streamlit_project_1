@@ -14,6 +14,16 @@ line_break()
 line_break()
 
 @st.cache
+# data load
+DATA_URL1 = 'data/KOSIS_소비자물가지수.csv'
+DATA_URL2 = 'data/df.csv'
+
+# data load function
+@st.cache
+def load_data(DATA_URL, nrows):
+    data = pd.read_csv(DATA_URL, nrows=nrows)
+    return data
+
 # 전년비 dataframe function
 def CPI_df(data, code, region):
     region_total = df_sample1[(df_sample1["품목코드"] == code) & (df_sample1["도시"] == region)]
@@ -93,6 +103,7 @@ option2 = st.selectbox(
 
 if (option1 in ['0', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']) & (option2 in ['전국', '서울특별시', '울산광역시', '인천광역시', '광주광역시', '대구광역시', '대전광역시', '부산광역시', '세종특별자치시', '제주특별자치도', '강원도', '경기도',
      '경상남도', '경상북도', '전라남도', '전라북도']):
+    data = load_data(DATA_URL1, 1000)
     fig = plt.figure(figsize=(10, 4))
     CPI_plot(data, option1, option2)
     st.pyplot(fig)
