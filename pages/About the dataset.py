@@ -27,4 +27,4 @@ if check_data:
     data_load_state = st.text('Loading data...')
     data = load_data(1000)
     data_load_state.text("")
-    st.table(load_data(1000)
+    st.table(load_data(1000))
